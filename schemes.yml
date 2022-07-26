@@ -1,17 +1,19 @@
 - name: artic-v3
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - ARTIC/V3
   developers:
     - name: ARTIC network
       url: https://artic.network/
-  vendors:
+  vendors: []
   amplicon_size: 400
   bed_url: https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.scheme.bed
-  bed_checksum:
+  bed_checksum: ""
   reference_sequence: MN908947.3
-  reference_checksum:
-  citation:
+  reference_checksum: ""
+  citation: ""
 
 - name: artic-v4
   organism: SARS-CoV-2
@@ -20,7 +22,7 @@
   developers:
     - name: ARTIC network
       url: https://artic.network/
-  vendors:
+  vendors: []
   amplicon_size: 400
   bed_url: https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V4/SARS-CoV-2.scheme.bed
   citation: https://community.artic.network/t/sars-cov-2-version-4-scheme-release/312
@@ -40,6 +42,7 @@
   citation: https://community.artic.network/t/sars-cov-2-v4-1-update-for-omicron-variant/342
 
 - name: midnight
+  organism: SARS-CoV-2
   aliases:
     - midnight-ont-v1
     - MRT001.10
@@ -48,12 +51,13 @@
       url: https://orcid.org/0000-0003-0921-5617
     - name: Olin Silander
       url: https://orcid.org/0000-0003-4105-8316 
-  vendors:
+  vendors: []
   amplicon_size: 1200
   bed_url: https://zenodo.org/record/3897530/files/SARS-CoV-2_primer_sets_RBK004_nanopore_sequencing.tab?download=1
   citation: https://www.protocols.io/view/sars-cov2-genome-sequencing-protocol-1200bp-amplic-btsrnnd6?version_warning=no
 
 - name: midnight-ont-v2
+  organism: SARS-CoV-2
   aliases:
     - MRT001.20
   developers:
@@ -63,12 +67,13 @@
       url: https://orcid.org/0000-0003-4105-8316 
     - name: Oxford Nanopore Technologies
       url: https://nanoporetech.com/
-  vendors:
+  vendors: []
   amplicon_size: 1200
   bed_url: https://github.com/epi2me-labs/wf-artic/blob/master/data/primer_schemes/SARS-CoV-2/Midnight-ONT/V3/SARS-CoV-2.scheme.bed
   citation: https://twitter.com/freed_nikki/status/1464477513107730433
 
 - name: midnight-ont-v3
+  organism: SARS-CoV-2
   aliases:
     - MRT001.30
   developers:
@@ -79,9 +84,10 @@
       url: https://store.nanoporetech.com/midnight-rt-pcr-expansion.html 
   amplicon_size: 1200
   bed_url: https://github.com/epi2me-labs/wf-artic/blob/master/data/primer_schemes/SARS-CoV-2/Midnight-ONT/V3/SARS-CoV-2.scheme.bed
-  citation:
+  citation: ""
 
 - name: midnight-idt-v4
+  organism: SARS-CoV-2
   aliases:
     - BCCDC-PHL_1200-v4
   developers:
@@ -92,31 +98,34 @@
       url: https://eu.idtdna.com/pages/products/next-generation-sequencing/workflow/xgen-ngs-amplicon-sequencing/predesigned-amplicon-panels/sars-cov-2-midnight-amp-panel
   amplicon_size: 1200
   bed_url: https://github.com/BCCDC-PHL/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V1200/BCCDC-PHL_1200_v4.scheme.bed
-  citation: 
+  citation: ""
 
 - name: varskip-neb-v1a
+  organism: SARS-CoV-2
   aliases:
     - NEB_VarSkip-V1a
   developers:
     - name: New England Biolabs
       url: https://international.neb.com/
-  vendors:
+  vendors: []
   amplicon_size: 520
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V1a/NEB_VarSkip.scheme.bed
   citation: https://github.com/nebiolabs/VarSkip/
 
 - name: varskip-neb-v2a
+  organism: SARS-CoV-2
   aliases:
     - NEB_VarSkip-V2a
   developers:
     - name: New England Biolabs
       url: https://international.neb.com/
-  vendors:
+  vendors: []
   amplicon_size: 520
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V2a/NEB_VarSkip.scheme.bed
   citation: https://github.com/nebiolabs/VarSkip/
 
 - name: varskip-neb-v2b
+  organism: SARS-CoV-2
   aliases:
     - NEB_VarSkip-V2b
   developers:
@@ -130,19 +139,19 @@
   citation: https://github.com/nebiolabs/VarSkip/
 
 - name: varskip-neb-v1a-long
+  organism: SARS-CoV-2
   aliases:
     - NEB_VarSkip-V1a-long
   developers:
     - name: New England Biolabs
       url: https://international.neb.com/
-  vendors:
-    - name: New England Biolabs
-      url: https://international.neb.com/products/e7626-nebnext-artic-sars-cov-2-rt-pcr-module#Product%20Information
+  vendors: []
   amplicon_size: 1400
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V1a-long/NEB_VarSkip.scheme.bed
   citation: https://github.com/nebiolabs/VarSkip/
 
 - name: eden
+  organism: SARS-CoV-2
   aliases:
     - Eden/V1
   developers:
@@ -150,66 +159,7 @@
       url: https://orcid.org/0000-0003-1374-3551
     - name: Eby Sim
       url: https://orcid.org/0000-0002-3716-7344
-  vendors:
+  vendors: []
   amplicon_size: 2500
   bed_url: https://github.com/Psy-Fer/SARS-CoV-2_GTG/blob/master/protocols/Eden/schemes/nCoV-2019/V1/nCoV-2019.scheme.bed
   citation: https://www.protocols.io/view/sars-cov-2-genome-sequencing-using-long-pooled-amp-kxygxeob4v8j/v1
-
-- name: Resende
-  aliases:
-    - Resende/V1
-  developers:
-    - name: Paola Cristina Resende
-      url: https://orcid.org/0000-0002-2884-3662
-    - name: Fernando Couto Motta
-      url:
-    - name: Sunando Roy
-      url: http://orcid.org/0000-0001-5968-9111
-    - name: Luciana Appolinario
-      url: http://orcid.org/0000-0001-5700-5804
-    - name: Allison Fabri
-      url: http://orcid.org/0000-0002-2914-3844
-    - name: Joilson Xavier
-      url: http://orcid.org/0000-0003-3916-2018
-    - name: Kathryn Harris
-      url: http://orcid.org/0000-0003-3807-9749
-    - name: Aline Rocha Matos
-      url: http://orcid.org/0000-0001-7763-2127
-    - name: Braulia Caetano
-      url:
-    - name: Maria Orgeswalska
-      url: http://orcid.org/0000-0002-9207-743X
-    - name: Milene Miranda
-      url: http://orcid.org/0000-0003-0037-059X
-    - name: Cristiana Garcia
-      url: http://orcid.org/0000-0002-4400-9141
-    - name: André Abreu
-      url: http://orcid.org/0000-0002-9167-2587
-    - name: Rachel Williams
-      url:
-    - name: Judith Breuer
-      url: http://orcid.org/0000-0001-8246-0534
-    - name: Marilda M Siqueira
-      url: http://orcid.org/0000-0003-4685-9817
-  vendors:
-  amplicon_size: 2000
-  bed_url:  
-  citation: https://www.biorxiv.org/content/10.1101/2020.04.30.069039v1
-
-- name: Entebbe
-  aliases:
-    - Entebbe/V1
-    - Cotten
-  developers:
-    - name: Matthew Cotten
-      url: https://orcid.org/0000-0002-3361-3351
-    - name: Dan Lule Bugembe
-      url:
-    - name: Pontiano Kaleebu
-      url:
-    - name: My V.T. Phan
-      url: https://orcid.org/0000-0002-6905-8513
-  vendors:
-  amplicon_size:
-  bed_url:
-  citation: https://academic.oup.com/ve/article/7/1/veab006/6128533

@@ -2,6 +2,16 @@
 
 This repository describes primer schemes for PrimalScheme amplicon sequencing.
 
+The `schemes.yml` describes known amplicon schemes (in YAML format). It follows a schema described by `schemes-schema.json`. The `incomplete-schemes.yml` file describes schemes
+that are known but where information is still
+incomplete.
+
+[ajv](https://github.com/ajv-validator/ajv-cli) can be used to validate the `schemes.yml`:
+
+```bash
+ajv --spec=draft2020 --errors=text -s schemes-schema.json -d schemes.yml
+```
+
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 This work is licensed under a
