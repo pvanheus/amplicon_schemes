@@ -1,0 +1,60 @@
+- name: Resende
+  organism: SARS-CoV-2
+  aliases:
+    - Resende/V1
+  developers:
+    - name: Paola Cristina Resende
+      url: https://orcid.org/0000-0002-2884-3662
+    - name: Fernando Couto Motta
+      url: ""
+    - name: Sunando Roy
+      url: http://orcid.org/0000-0001-5968-9111
+    - name: Luciana Appolinario
+      url: http://orcid.org/0000-0001-5700-5804
+    - name: Allison Fabri
+      url: http://orcid.org/0000-0002-2914-3844
+    - name: Joilson Xavier
+      url: http://orcid.org/0000-0003-3916-2018
+    - name: Kathryn Harris
+      url: http://orcid.org/0000-0003-3807-9749
+    - name: Aline Rocha Matos
+      url: http://orcid.org/0000-0001-7763-2127
+    - name: Braulia Caetano
+      url: ""
+    - name: Maria Orgeswalska
+      url: http://orcid.org/0000-0002-9207-743X
+    - name: Milene Miranda
+      url: http://orcid.org/0000-0003-0037-059X
+    - name: Cristiana Garcia
+      url: http://orcid.org/0000-0002-4400-9141
+    - name: André Abreu
+      url: http://orcid.org/0000-0002-9167-2587
+    - name: Rachel Williams
+      url: ""
+    - name: Judith Breuer
+      url: http://orcid.org/0000-0001-8246-0534
+    - name: Marilda M Siqueira
+      url: http://orcid.org/0000-0003-4685-9817
+  vendors:
+  amplicon_size: 2000
+  bed_url: 
+  citation: https://www.biorxiv.org/content/10.1101/2020.04.30.069039v1
+
+- name: Entebbe
+  organism: SARS-CoV-2
+  aliases:
+    - Entebbe/V1
+    - Cotten
+  developers:
+    - name: Matthew Cotten
+      url: https://orcid.org/0000-0002-3361-3351
+    - name: Dan Lule Bugembe
+      url:
+    - name: Pontiano Kaleebu
+      url:
+    - name: My V.T. Phan
+      url: https://orcid.org/0000-0002-6905-8513
+  vendors: []
+  amplicon_size:
+  bed_url: 
+  citation: https://academic.oup.com/ve/article/7/1/veab006/6128533
