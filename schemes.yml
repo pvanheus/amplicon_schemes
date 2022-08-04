@@ -17,6 +17,8 @@
 
 - name: artic-v4
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - ARTIC/V4
   developers:
@@ -25,10 +27,15 @@
   vendors: []
   amplicon_size: 400
   bed_url: https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V4/SARS-CoV-2.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: https://community.artic.network/t/sars-cov-2-version-4-scheme-release/312
 
 - name: artic-v4.1
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - ARTIC/V4.1
   developers:
@@ -39,10 +46,15 @@
       url: https://eu.idtdna.com/pages/products/next-generation-sequencing/workflow/xgen-ngs-amplicon-sequencing/predesigned-amplicon-panels/artic-sc2-amp-panel
   amplicon_size: 400
   bed_url: https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V4.1/SARS-CoV-2.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: https://community.artic.network/t/sars-cov-2-v4-1-update-for-omicron-variant/342
 
 - name: midnight
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - midnight-ont-v1
     - MRT001.10
@@ -54,10 +66,15 @@
   vendors: []
   amplicon_size: 1200
   bed_url: https://zenodo.org/record/3897530/files/SARS-CoV-2_primer_sets_RBK004_nanopore_sequencing.tab?download=1
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: https://www.protocols.io/view/sars-cov2-genome-sequencing-protocol-1200bp-amplic-btsrnnd6?version_warning=no
 
 - name: midnight-ont-v2
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - MRT001.20
   developers:
@@ -70,10 +87,15 @@
   vendors: []
   amplicon_size: 1200
   bed_url: https://github.com/epi2me-labs/wf-artic/blob/master/data/primer_schemes/SARS-CoV-2/Midnight-ONT/V3/SARS-CoV-2.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: https://twitter.com/freed_nikki/status/1464477513107730433
 
 - name: midnight-ont-v3
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - MRT001.30
   developers:
@@ -84,10 +106,15 @@
       url: https://store.nanoporetech.com/midnight-rt-pcr-expansion.html 
   amplicon_size: 1200
   bed_url: https://github.com/epi2me-labs/wf-artic/blob/master/data/primer_schemes/SARS-CoV-2/Midnight-ONT/V3/SARS-CoV-2.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: ""
 
 - name: midnight-idt-v4
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - BCCDC-PHL_1200-v4
   developers:
@@ -98,10 +125,15 @@
       url: https://eu.idtdna.com/pages/products/next-generation-sequencing/workflow/xgen-ngs-amplicon-sequencing/predesigned-amplicon-panels/sars-cov-2-midnight-amp-panel
   amplicon_size: 1200
   bed_url: https://github.com/BCCDC-PHL/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V1200/BCCDC-PHL_1200_v4.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: ""
 
 - name: varskip-neb-v1a
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - NEB_VarSkip-V1a
   developers:
@@ -110,10 +142,15 @@
   vendors: []
   amplicon_size: 520
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V1a/NEB_VarSkip.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: https://github.com/nebiolabs/VarSkip/
 
 - name: varskip-neb-v2a
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - NEB_VarSkip-V2a
   developers:
@@ -122,10 +159,15 @@
   vendors: []
   amplicon_size: 520
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V2a/NEB_VarSkip.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: https://github.com/nebiolabs/VarSkip/
 
 - name: varskip-neb-v2b
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - NEB_VarSkip-V2b
   developers:
@@ -136,10 +178,15 @@
       url: https://international.neb.com/products/e7626-nebnext-artic-sars-cov-2-rt-pcr-module#Product%20Information
   amplicon_size: 520
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V2b/NEB_VarSkip.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: https://github.com/nebiolabs/VarSkip/
 
 - name: varskip-neb-v1a-long
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - NEB_VarSkip-V1a-long
   developers:
@@ -148,10 +195,15 @@
   vendors: []
   amplicon_size: 1400
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V1a-long/NEB_VarSkip.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: https://github.com/nebiolabs/VarSkip/
 
 - name: eden
   organism: SARS-CoV-2
+  organism_aliases:
+    - nCoV-2019
   aliases:
     - Eden/V1
   developers:
@@ -162,4 +214,7 @@
   vendors: []
   amplicon_size: 2500
   bed_url: https://github.com/Psy-Fer/SARS-CoV-2_GTG/blob/master/protocols/Eden/schemes/nCoV-2019/V1/nCoV-2019.scheme.bed
+  bed_checksum: ""
+  reference_sequence: MN908947.3
+  reference_checksum: ""
   citation: https://www.protocols.io/view/sars-cov-2-genome-sequencing-using-long-pooled-amp-kxygxeob4v8j/v1
