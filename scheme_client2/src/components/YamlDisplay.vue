@@ -14,7 +14,7 @@ export default {
   },
   computed: {
     yamlText() {
-      return yaml.dump(this.data)
+      return yaml.dump(this.data, { sortKeys: true })
     }
   }
 }

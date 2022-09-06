@@ -1,36 +1,26 @@
 <template>
   <v-app>
-    <v-main>
-      <v-container>
-        <v-row>
-          <v-col>
-            <SchemeForm @changeModel="modelChange($event)"/>
-          </v-col>
-          <v-col>
-            <YamlDisplay :data="model"/>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
+    <v-navigation-drawer permanent>
+      <v-list>
+        <v-list-item>
+          <v-list-item-content>
+            <router-link to="/">Home</router-link>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title><router-link to="/list">List</router-link></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <router-view></router-view>
   </v-app>
 </template>
 
 <script>
-import SchemeForm from "@/components/SchemeForm";
-import YamlDisplay from "@/components/YamlDisplay";
+
 export default {
   name: 'App',
-  components: {
-    SchemeForm,
-    YamlDisplay
-  },
-  data: () => ({
-    model: {}
-  }),
-  methods: {
-    modelChange(e) {
-      this.model = e;
-    }
-  }
 };
 </script>

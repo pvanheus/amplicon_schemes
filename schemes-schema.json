@@ -77,8 +77,8 @@
             "description": "Checksum for the primer scheme BED file, in format hash:checksum, where hash is lowercase name of hash e.g. sha256",
             "type": "string"
         },
-        "reference_sequence": {
-            "description": "INSDC identifier or URL for reference sequence that the primer scheme refers to",
+        "reference_url": {
+            "description": "URL for reference sequence that the primer scheme refers to",
             "type": "string"
         },
         "reference_checksum": {

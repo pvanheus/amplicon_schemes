@@ -11,7 +11,7 @@
   amplicon_size: 400
   bed_url: https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: ""
 
@@ -28,7 +28,7 @@
   amplicon_size: 400
   bed_url: https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V4/SARS-CoV-2.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: https://community.artic.network/t/sars-cov-2-version-4-scheme-release/312
 
@@ -47,7 +47,7 @@
   amplicon_size: 400
   bed_url: https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V4.1/SARS-CoV-2.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: https://community.artic.network/t/sars-cov-2-v4-1-update-for-omicron-variant/342
 
@@ -67,7 +67,7 @@
   amplicon_size: 1200
   bed_url: https://zenodo.org/record/3897530/files/SARS-CoV-2_primer_sets_RBK004_nanopore_sequencing.tab?download=1
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: https://www.protocols.io/view/sars-cov2-genome-sequencing-protocol-1200bp-amplic-btsrnnd6?version_warning=no
 
@@ -88,7 +88,7 @@
   amplicon_size: 1200
   bed_url: https://github.com/epi2me-labs/wf-artic/blob/master/data/primer_schemes/SARS-CoV-2/Midnight-ONT/V3/SARS-CoV-2.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: https://twitter.com/freed_nikki/status/1464477513107730433
 
@@ -107,7 +107,7 @@
   amplicon_size: 1200
   bed_url: https://github.com/epi2me-labs/wf-artic/blob/master/data/primer_schemes/SARS-CoV-2/Midnight-ONT/V3/SARS-CoV-2.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: ""
 
@@ -126,7 +126,7 @@
   amplicon_size: 1200
   bed_url: https://github.com/BCCDC-PHL/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V1200/BCCDC-PHL_1200_v4.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: ""
 
@@ -143,7 +143,7 @@
   amplicon_size: 520
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V1a/NEB_VarSkip.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: https://github.com/nebiolabs/VarSkip/
 
@@ -160,7 +160,7 @@
   amplicon_size: 520
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V2a/NEB_VarSkip.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: https://github.com/nebiolabs/VarSkip/
 
@@ -179,7 +179,7 @@
   amplicon_size: 520
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V2b/NEB_VarSkip.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: https://github.com/nebiolabs/VarSkip/
 
@@ -196,7 +196,7 @@
   amplicon_size: 1400
   bed_url: https://github.com/nebiolabs/VarSkip/blob/main/schemes/NEB_VarSkip/V1a-long/NEB_VarSkip.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: https://github.com/nebiolabs/VarSkip/
 
@@ -215,6 +215,6 @@
   amplicon_size: 2500
   bed_url: https://github.com/Psy-Fer/SARS-CoV-2_GTG/blob/master/protocols/Eden/schemes/nCoV-2019/V1/nCoV-2019.scheme.bed
   bed_checksum: ""
-  reference_sequence: MN908947.3
+  reference_url: MN908947.3
   reference_checksum: ""
   citation: https://www.protocols.io/view/sars-cov-2-genome-sequencing-using-long-pooled-amp-kxygxeob4v8j/v1

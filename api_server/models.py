@@ -10,7 +10,7 @@ class PersonOrOrg(BaseModel):
     name: str
     url: Union[HttpUrl, str] = None
 
-class Scheme(BaseModel):
+class Scheme(YamlModel):
     name: str
     organism: str
     organism_aliases: list[str]
@@ -20,7 +20,7 @@ class Scheme(BaseModel):
     amplicon_size: int
     bed_url: HttpUrl
     bed_checksum: str
-    reference_sequence: Union[str, HttpUrl]
+    reference_url: Union[str, HttpUrl]
     reference_checksum: str
     citation: Union[HttpUrl, str] = None
 
