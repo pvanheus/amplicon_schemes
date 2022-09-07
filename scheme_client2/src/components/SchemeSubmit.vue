@@ -1,16 +1,14 @@
 <template>
-  <v-main>
-    <v-container>
-      <v-row>
-        <v-col>
-          <SchemeForm @changeModel="modelChange($event)"/>
-        </v-col>
-        <v-col>
-          <YamlDisplay :data="model"/>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-main>
+  <v-container>
+    <v-row>
+      <v-col>
+        <SchemeForm @changeModel="modelChange($event)"/>
+      </v-col>
+      <v-col>
+        <YamlDisplay :data="model"/>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

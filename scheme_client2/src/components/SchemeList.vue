@@ -1,15 +1,22 @@
 <template>
-  <div>
+  <v-container>
+    <v-text-field
+        v-model="search"
+        label="Search"
+    ></v-text-field>
     <v-data-table
         :items="schemes"
-        :headers="headers">
+        item-key="name"
+        :headers="headers"
+        :search="search"
+      >
       <template #item.bed_url="{ item }">
         <a target="_blank" :href="item.bed_url">
           BED file
         </a>
       </template>
     </v-data-table>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -19,6 +26,7 @@ export default {
   name: "SchemeList",
   data() {
     return {
+      search: '',
       schemes: Array(),
       headers: [
         {
@@ -35,7 +43,8 @@ export default {
         },
         {
           text: 'BED',
-          value: 'bed_url'
+          value: 'bed_url',
+          filterable: false
         }
       ]
     }

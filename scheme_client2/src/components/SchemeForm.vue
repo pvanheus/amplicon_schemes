@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-form v-model="valid">
+    <v-form v-model="valid" ref="form">
       <v-jsf :schema="schema" v-model="model" @change="changeModel" :options="options"/>
       <template v-if="!model.bed_url">
         <v-subheader>If you do not yet have a BED file of your primer scheme, you can upload one here</v-subheader>
@@ -74,23 +74,26 @@ export default {
       }
     },
     submitForm() {
-      let submitted_form = this.model;
-      submitted_form.bed_checksum = 'ABCD';
-      submitted_form.reference_checksum = 'ABCD';
-      const contents = JSON.stringify(submitted_form);
-      fetch(`http://localhost:8000/schema/${this.model.name}`,{
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: contents
-      }).then(async response => {
-        const data = await response.json();
-        console.log(data)
-      }).catch(error => {
-        console.log("got here");
-        console.error("There was an error", error);
-      });
+      const form_valid = this.$refs.form.validate();
+      if (form_valid) {
+        let submitted_form = this.model;
+        submitted_form.bed_checksum = 'ABCD';
+        submitted_form.reference_checksum = 'ABCD';
+        const contents = JSON.stringify(submitted_form);
+        fetch(`http://localhost:8000/schema/${this.model.name}`,{
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: contents
+        }).then(async response => {
+          const data = await response.json();
+          console.log(data)
+        }).catch(error => {
+          console.log("got here");
+          console.error("There was an error", error);
+        });
+      }
     }
   }
 }
