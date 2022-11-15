@@ -38,5 +38,5 @@ for scheme in primer_list.schemes:
         bold_if = lambda v: '**' if v.version == scheme.latest_version else ''
         scheme_versions_md = ', '.join([ f'{bold_if(v)}[{v.version}]({v.repository}){bold_if(v)}' for v in scheme.versions ])
         table_md.append(f'|{scheme.name}|{scheme.latest_version}|{scheme_versions_md}|')
-st.markdown('\n'.join(table_md))
+tab1.markdown('\n'.join(table_md))
 
