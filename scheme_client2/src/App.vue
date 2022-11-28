@@ -3,10 +3,7 @@
     <v-app-bar color="blue" class="flex-grow-0" app dark>
       <v-app-bar-title class="title">Primer Schemes</v-app-bar-title>
     </v-app-bar>
-    <v-main>
-      <router-view></router-view>
-    </v-main>
-    <v-navigation-drawer app>
+    <v-navigation-drawer app floating>
       <v-list  dense nav>
         <router-link v-for="item in nav_items" :key="item.title" :to="item.link">
           <v-list-item link>
@@ -20,6 +17,21 @@
         </router-link>
       </v-list>
     </v-navigation-drawer>
+
+    <v-content>
+      <v-container fluid>
+        <v-row class="fill-height">
+          <v-col>
+            <transition name="fade">
+              <router-view></router-view>
+            </transition>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-content>
+    <v-footer>
+      Footer goes here
+    </v-footer>
   </v-app>
 </template>
 
