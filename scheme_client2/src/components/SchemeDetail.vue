@@ -1,9 +1,13 @@
 <template>
-  <v-card class="fill-height card">
-    <v-card-title>Scheme Name:&nbsp; {{detail.name}}</v-card-title>
-    <v-card-text>
+  <v-container fluid>
+    <v-row :class="spacer_class">
+      <h3>Scheme Name:&nbsp; {{detail.name}}</h3>
+    </v-row>
+    <v-col class="sm6">
+    <v-row :class="spacer_class">
       <strong label>Organism:</strong> {{this.detail.organism}}
-      <div v-if="detail.organism_aliases">
+    </v-row>
+      <row :class="spacer_class" v-if="detail.organism_aliases">
           <strong>Organism Aliases:</strong>
           <v-list dense v-for="alias in detail.organism_aliases" :key="alias" class="pa-0 ma-0">
             <v-list-item>
@@ -12,17 +16,21 @@
               </v-list-item-content>
             </v-list-item>
           </v-list>
-      </div>
-      <strong>Amplicon Size: </strong> &nbsp;{{detail.amplicon_size}}
-      <div v-if="detail.aliases">
+      </row>
+      <v-row :class="spacer_class">
+        <strong>Amplicon Size: </strong> &nbsp;{{detail.amplicon_size}}
+      </v-row>
+      <v-row :class="spacer_class" v-if="detail.aliases">
         <strong>Scheme Name Aliases:</strong>
-        <v-list v-for="alias in detail.aliases" v-bind:key="alias">
+        <v-list dense v-for="alias in detail.aliases" v-bind:key="alias" class="pa-0 ma-0">
           <v-list-item>{{alias}}</v-list-item>
         </v-list>
-      </div>
-      <div>
+      </v-row>
+    </v-col>
+    <v-col class="sm6">
+      <v-row :class="spacer_class">
         <strong>Scheme Developers:</strong>
-        <v-list v-for="developer in detail.developers" v-bind:key="developer.name">
+        <v-list dense v-for="developer in detail.developers" v-bind:key="developer.name">
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title>
@@ -31,8 +39,8 @@
             </v-list-item-content>
           </v-list-item>
         </v-list>
-      </div>
-      <div v-if="detail.vendors">
+      </v-row>
+      <v-row :class="spacer_class" v-if="detail.vendors">
         <strong>Primer Vendors:</strong>
         <v-list dense v-for="vendor in detail.vendors" v-bind:key="vendor.name">
           <v-list-item v-if="vendor.url">
@@ -44,22 +52,24 @@
           </v-list-item>
           <v-list-item v-else>{{vendor.name}}<span v-if="vendor.kit_name">: {{vendor.kit_name}}</span></v-list-item>
         </v-list>
-      </div>
-      <div v-if="detail.citations">
+      </v-row>
+      <v-row :class="spacer_class" v-if="detail.citations">
         <strong>Citations:</strong>
-        <v-list v-for="citation in detail.citations" v-bind:key="citation">
+        <v-list dense v-for="citation in detail.citations" v-bind:key="citation">
           <v-list-item><a :href="citation">{{citation}}</a></v-list-item>
         </v-list>
-      </div>
-      <div v-if="detail.derived_from">
+      </v-row>
+      <v-row :class="spacer_class" v-if="detail.derived_from">
         <strong>Derived from:</strong> &nbsp;<span v-html="detail.derived_from"></span>
-      </div>
-      <strong>Link to repository</strong> <a :href="detail.repository_url" target="_blank"><v-icon>mdi-link</v-icon></a>
-      <v-card-actions>
+      </v-row>
+      <v-row :class="spacer_class">
+        <strong>Link to repository</strong> <a :href="detail.repository_url" target="_blank"><v-icon>mdi-link</v-icon></a>
+      </v-row>
+      <v-row :class="spacer_class">
         <v-btn @click="downloadScheme">Download</v-btn>
-      </v-card-actions>
-    </v-card-text>
-  </v-card>
+      </v-row>
+    </v-col>
+  </v-container>
 </template>
 
 <script>
@@ -72,6 +82,7 @@ export default {
   },
   data() {
     return {
+      spacer_class: "ma-1",
       detail: null
     }
   },
