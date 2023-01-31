@@ -4,18 +4,18 @@
       <h3>Scheme Name:&nbsp; {{detail.name}}</h3>
     </v-row>
     <v-col class="sm6">
-    <v-row :class="spacer_class">
-      <strong label>Organism:</strong> {{this.detail.organism}}
-    </v-row>
+      <v-row :class="spacer_class">
+        <strong label>Organism:</strong> {{this.detail.organism}}
+      </v-row>
       <row :class="spacer_class" v-if="detail.organism_aliases">
-          <strong>Organism Aliases:</strong>
-          <v-list dense v-for="alias in detail.organism_aliases" :key="alias" class="pa-0 ma-0">
-            <v-list-item>
-              <v-list-item-content>
-                  {{alias}}
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
+        <strong>Organism Aliases:</strong>
+        <v-list dense v-for="alias in detail.organism_aliases" :key="alias" class="pa-0 ma-0">
+          <v-list-item>
+            <v-list-item-content>
+              {{alias}}
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
       </row>
       <v-row :class="spacer_class">
         <strong>Amplicon Size: </strong> &nbsp;{{detail.amplicon_size}}

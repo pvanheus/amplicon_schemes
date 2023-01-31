@@ -43,7 +43,8 @@ export default {
     nav_items: [
       { title: 'Home', icon: 'mdi-home', link: '/' },
       { title: 'Scheme List', icon: 'mdi-eye', link: '/list' },
-      { title: 'Scheme Detail', link: '/detail' }
+      { title: 'Scheme Detail', link: '/detail' },
+      { title: 'Scheme Detail B', link: '/detail_b' }
     ]
   })
 };
