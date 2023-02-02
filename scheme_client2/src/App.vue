@@ -1,23 +1,23 @@
 <template>
   <v-app>
-    <v-app-bar color="blue" class="flex-grow-0" app dark>
-      <v-app-bar-title class="title">Primer Schemes</v-app-bar-title>
+    <v-app-bar color="blue" class="flex-grow-0" app>
+      <v-app-bar-nav-icon @click="drawer = true"> </v-app-bar-nav-icon>
+      <v-toolbar-title class="title">Primer Schemes</v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer app floating>
-      <v-list  dense nav>
-        <router-link v-for="item in nav_items" :key="item.title" :to="item.link">
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </router-link>
-      </v-list>
-    </v-navigation-drawer>
-
+      <v-navigation-drawer v-model="drawer" app temporary>
+        <v-list  dense nav>
+          <router-link v-for="item in nav_items" :key="item.title" :to="item.link">
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>{{ item.icon }}</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </router-link>
+        </v-list>
+      </v-navigation-drawer>
     <v-main>
       <v-container fluid>
         <v-row class="fill-height">
@@ -40,6 +40,7 @@
 export default {
   name: 'App',
   data: () => ({
+    drawer: false,
     nav_items: [
       { title: 'Scheme List', icon: 'mdi-eye', link: '/' },
       { title: 'Add a Scheme', icon: 'mdi-plus', link: '/add' },
@@ -49,7 +50,4 @@ export default {
 </script>
 
 <style>
-.v-app-bar-title__content{
-  width: 200px;
-}
 </style>
