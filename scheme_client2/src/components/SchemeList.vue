@@ -9,8 +9,42 @@
         item-key="name"
         :headers="headers"
         :search="search"
-      >
-      <template #item.versions="{ item }">
+        :expanded.sync="expanded"
+        show-expand
+    >
+      <template v-slot:item.latest_version="{ item }">
+        {{item.latest_version}}
+        <span v-if="isKnown(item.name, item.latest_version)">
+            <v-dialog
+
+                v-model="dialog[dialogKey(item.name, item.latest_version)]"
+                width="800"
+            >
+              <template v-slot:activator="{ on, attrs }">
+                <v-icon small
+                        v-bind="attrs"
+                        v-on="on"
+                >mdi-information-outline</v-icon>
+              </template>
+
+              <div>
+                <v-card>
+              <scheme-detail-bootstrap :detail="getDetail(item.name, item.latest_version)" />
+                  <v-btn
+                      color="primary"
+                      text
+                      @click="dialog[dialogKey(item.name, item.latest_version)] = false"
+                  >
+                    Close
+                  </v-btn>
+                  </v-card>
+              </div>
+            </v-dialog>
+          </span>
+      </template>
+      <template v-slot:expanded-item="{ headers, item }">
+        <!-- for some reason this colspan isn't working -->
+        <td class="d-flex justify-space-between" :colspan="headers.length">
         <span v-for="version in item.versions" :key="version.version">
           <strong v-if="version.version === item.latest_version">
             {{version.version}}
@@ -44,7 +78,7 @@
             </v-dialog>
           </span>
         </span>
-
+        </td>
       </template>
     </v-data-table>
   </v-container>
@@ -64,6 +98,7 @@ export default {
       search: '',
       schemes: Array(),
       scheme_details: Object(),
+      expanded: [],
       headers: [
         {
           text: 'Name',
@@ -75,11 +110,10 @@ export default {
         },
         {
           text: 'Latest Version',
-          value: 'latest_version'
+          value: 'latest_version',
+          sortable: false
         },
-        { text: 'Versions',
-          value: 'versions'
-        }
+        { text: '', value: 'data-table-expand' },
       ]
     }
   },
