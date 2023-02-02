@@ -1,17 +1,23 @@
 <template>
   <v-container>
-    <v-text-field
-        v-model="search"
-        label="Search"
-    ></v-text-field>
     <v-data-table
         :items="schemes"
         item-key="name"
         :headers="headers"
         :search="search"
         :expanded.sync="expanded"
+        single-expand
         show-expand
     >
+      <template v-slot:top>
+        <v-toolbar flat>
+          <v-spacer></v-spacer>
+        <v-text-field
+            v-model="search"
+            label="Search"
+        ></v-text-field>
+        </v-toolbar>
+      </template>
       <template v-slot:item.latest_version="{ item }">
         {{item.latest_version}}
         <span v-if="isKnown(item.name, item.latest_version)">
@@ -43,8 +49,8 @@
           </span>
       </template>
       <template v-slot:expanded-item="{ headers, item }">
-        <!-- for some reason this colspan isn't working -->
-        <td class="d-flex justify-space-between" :colspan="headers.length">
+        <td :colspan="headers.length">
+          All versions:
         <span v-for="version in item.versions" :key="version.version">
           <strong v-if="version.version === item.latest_version">
             {{version.version}}
