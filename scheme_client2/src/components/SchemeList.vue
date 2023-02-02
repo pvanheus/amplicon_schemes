@@ -19,8 +19,8 @@
           <span>
             <v-dialog
                 v-if="isKnown(item.name, version.version)"
-                v-model="dialog"
-                width="500"
+                v-model="dialog[dialogKey(item.name, version.version)]"
+                width="800"
               >
               <template v-slot:activator="{ on, attrs }">
                 <v-icon small
@@ -29,25 +29,18 @@
                 >mdi-information-outline</v-icon>
               </template>
 
-              <v-card >
-                <v-card-title>
-                  Title
-                </v-card-title>
-
-                <v-card-text>
-                  Details
-                </v-card-text>
-
-                <v-card-actions>
+              <div>
+                <v-card>
+              <scheme-detail-bootstrap :detail="getDetail(item.name, version.version)" />
                   <v-btn
                     color="primary"
                     text
-                    @click="dialog = false"
+                    @click="dialog[dialogKey(item.name, version.version)] = false"
                     >
                     Close
                   </v-btn>
-                </v-card-actions>
-              </v-card>
+                  </v-card>
+              </div>
             </v-dialog>
           </span>
         </span>
@@ -58,13 +51,16 @@
 </template>
 
 <script>
+import SchemeDetailBootstrap from "@/components/SchemeDetail.vue";
+
 const yaml = require('js-yaml');
 
 export default {
   name: "SchemeList",
+  components: {SchemeDetailBootstrap},
   data() {
     return {
-      dialog: false,
+      dialog: Object(),
       search: '',
       schemes: Array(),
       scheme_details: Object(),
@@ -102,15 +98,26 @@ export default {
       const lookupVersion = version.toString().toLowerCase();
       return this.scheme_details[lookupName] && this.scheme_details[lookupName][lookupVersion]
     },
+    dialogKey: function(name, version) {
+      const lookupName = name.toString().toLowerCase();
+      const lookupVersion = version.toString().toLowerCase();
+      return (lookupName + lookupVersion)
+    },
+    getDetail: function(name, version) {
+      const lookupName = name.toString().toLowerCase();
+      const lookupVersion = version.toString().toLowerCase();
+      return this.scheme_details[lookupName][lookupVersion]
+    },
     loadSchemeDetails: function (schemes) {
       schemes.forEach(scheme => {
         this.$set(this.scheme_details, scheme.name.toLowerCase(), {});
         scheme.versions.forEach(v => {
-          const url = v.repository.replace('github.com', 'raw.githubusercontent.com') + '/scheme.yaml';
+          const url = v.repository.replace('github.com', 'raw.githubusercontent.com') + '/info.yaml';
           fetch(url).then(async response => {
             if (response.status === 200) {
               const result = yaml.load(await response.text());
               this.$set(this.scheme_details[scheme.name.toLowerCase()], v.version.toLowerCase(), result);
+              this.$set(this.dialog[this.dialogKey(scheme.name, scheme.version)], false);
             }
           })
         });

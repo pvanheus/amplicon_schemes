@@ -18,7 +18,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-content>
+    <v-main>
       <v-container fluid>
         <v-row class="fill-height">
           <v-col>
@@ -28,7 +28,7 @@
           </v-col>
         </v-row>
       </v-container>
-    </v-content>
+    </v-main>
     <v-footer>
       Footer goes here
     </v-footer>
@@ -41,10 +41,8 @@ export default {
   name: 'App',
   data: () => ({
     nav_items: [
-      { title: 'Home', icon: 'mdi-home', link: '/' },
       { title: 'Scheme List', icon: 'mdi-eye', link: '/list' },
-      { title: 'Scheme Detail', link: '/detail' },
-      { title: 'Scheme Detail B', link: '/detail_b' }
+      { title: 'Add a Scheme', icon: 'mdi-plus', link: '/add' },
     ]
   })
 };
