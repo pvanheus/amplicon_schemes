@@ -41,7 +41,7 @@ export default {
   name: 'App',
   data: () => ({
     nav_items: [
-      { title: 'Scheme List', icon: 'mdi-eye', link: '/list' },
+      { title: 'Scheme List', icon: 'mdi-eye', link: '/' },
       { title: 'Add a Scheme', icon: 'mdi-plus', link: '/add' },
     ]
   })

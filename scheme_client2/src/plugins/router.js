@@ -7,7 +7,7 @@ Vue.use(Router);
 export default new Router({
     routes: [
         { path: '/add', component: SchemeSubmit },
-        { path: '/list', component: SchemeList },
+        { path: '/', component: SchemeList },
     ],
     mode: "history"
 });
