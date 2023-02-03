@@ -40,13 +40,13 @@
       <v-col>
         <h3>
           <span v-if="detail.developers && detail.developers.length === 1">Scheme Developer
-            <span  class="font-weight-light"><a :href="detail.developers[0].url">{{ detail.developers[0].name}}</a></span>
+            <span  class="font-weight-light"><a :href="detail.developers[0].url" target="_blank">{{ detail.developers[0].name}}</a></span>
           </span>
           <span v-else>
             Scheme Developers
             <v-list>
               <v-list-item v-for="developer in detail.developers" :key="developer.name">
-                <span  class="font-weight-light"><a :href="developer.url">{{ developer.name}}</a></span>
+                <span  class="font-weight-light"><a :href="developer.url" target="_blank">{{ developer.name}}</a></span>
               </v-list-item>
             </v-list>
           </span>
@@ -57,13 +57,13 @@
       <v-col>
         <h3>
           <span v-if="detail.vendors && detail.vendors.length === 1">Primer Vendor
-            <span  class="font-weight-light"><a :href="detail.vendors[0].url">{{ detail.vendors[0].name}}</a></span>
+            <span  class="font-weight-light"><a :href="detail.vendors[0].url" target="_blank">{{ detail.vendors[0].name}}</a></span>
           </span>
-          <span v-else>
+          <span v-else-if="detail.vendors && detail.vendors.length >= 1">
             Primer Vendors
             <v-list>
               <v-list-item v-for="vendor in detail.vendors" :key="vendor.name">
-                <span  class="font-weight-light"><a :href="vendor.url">{{ vendor.name}}</a></span>
+                <span  class="font-weight-light"><a :href="vendor.url" target="_blank">{{ vendor.name}}</a></span>
               </v-list-item>
             </v-list>
           </span>
@@ -74,13 +74,13 @@
       <v-col>
         <h3>
           <span v-if="detail.citations && detail.citations.length === 1">Citation
-            <span  class="font-weight-light"><a :href="detail.citations[0]">{{ detail.citations[0] }}</a></span>
+            <span  class="font-weight-light"><a :href="detail.citations[0]" target="_blank">{{ detail.citations[0] }}</a></span>
           </span>
           <span v-else>
             Citations
             <v-list>
               <v-list-item v-for="citation in detail.citations" :key="citation">
-                <span class="font-weight-light"><a :href="citatioin">{{ citation }}</a></span>
+                <span class="font-weight-light"><a :href="citation" target="_blank">{{ citation }}</a></span>
               </v-list-item>
             </v-list>
           </span>

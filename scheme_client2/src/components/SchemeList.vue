@@ -52,7 +52,7 @@
         <td :colspan="headers.length">
           All versions:
         <span v-for="version in item.versions" :key="version.version">
-          <strong v-if="version.version === item.latest_version">
+          <strong v-if="item.latest_version && version.version === item.latest_version">
             {{version.version}}
           </strong>
           <span v-else> {{version.version}} </span>
@@ -134,6 +134,9 @@ export default {
   },
   methods: {
     isKnown: function(name, version) {
+      if (name === undefined || version === undefined) {
+        return false
+      }
       const lookupName = name.toString().toLowerCase();
       const lookupVersion = version.toString().toLowerCase();
       return this.scheme_details[lookupName] && this.scheme_details[lookupName][lookupVersion]
@@ -157,7 +160,8 @@ export default {
             if (response.status === 200) {
               const result = yaml.load(await response.text());
               this.$set(this.scheme_details[scheme.name.toLowerCase()], v.version.toLowerCase(), result);
-              this.$set(this.dialog[this.dialogKey(scheme.name, scheme.version)], false);
+              const key = this.dialogKey(scheme.name, v.version);
+              this.$set(this.dialog[key], false);
             }
           })
         });
