@@ -35,7 +35,7 @@
 
               <div>
                 <v-card>
-              <scheme-detail-bootstrap :detail="getDetail(item.name, item.latest_version)" />
+              <scheme-detail :detail="getDetail(item.name, item.latest_version)" />
                   <v-btn
                       color="primary"
                       text
@@ -71,7 +71,7 @@
 
               <div>
                 <v-card>
-              <scheme-detail-bootstrap :detail="getDetail(item.name, version.version)" />
+              <scheme-detail :detail="getDetail(item.name, version.version)" />
                   <v-btn
                     color="primary"
                     text
@@ -91,13 +91,13 @@
 </template>
 
 <script>
-import SchemeDetailBootstrap from "@/components/SchemeDetail.vue";
+import SchemeDetail from "@/components/SchemeDetail.vue";
 
 const yaml = require('js-yaml');
 
 export default {
   name: "SchemeList",
-  components: {SchemeDetailBootstrap},
+  components: {SchemeDetail},
   data() {
     return {
       dialog: Object(),

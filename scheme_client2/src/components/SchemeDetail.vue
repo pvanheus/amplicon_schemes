@@ -104,7 +104,7 @@
 
 <script>
 export default {
-  name: "SchemeDetailBootstrap.vue",
+  name: "SchemeDetail",
   props: {
     detail: Object,
   },
